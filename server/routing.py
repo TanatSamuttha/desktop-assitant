@@ -3,6 +3,6 @@ from model.LLM import llm
 
 app = FastAPI()
 
-@app.get("/test")
+@app.post("/message")
 async def TestEndpoint():
     return {"result": "success"}
