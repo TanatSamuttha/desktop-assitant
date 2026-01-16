@@ -4,19 +4,12 @@ from models.llm.llm import llm, prompt
 
 async def chat_node(state: ChatState) -> ChatState:
     messages = prompt.format_messages(
-        chat_history = state.chat_history,
-        user_input = state.user_input
-        
+        user_input = state.user_message
     )
 
     response = await llm.ainvoke(messages)
 
-    updated_history = state.chat_history+[
-        HumanMessage(content=state.user_input),
-        AIMessage(content=response.content)
-    ]
-
     return {
-        "user_input": state.user_input,
-        "chat_history": updated_history
+        "user_message": state.user_message,
+        "raw_response": response.text
     }

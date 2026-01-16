@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from services.callLLM import CallLLM
+from services.callAssistant import callAssistant
 
 app = FastAPI()
 
-@app.post("/message")
+@app.post("/call-assistant")
 async def TestEndpoint():
     return {"result": "success"}

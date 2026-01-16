@@ -8,5 +8,5 @@ with open("./model/llm/prompt.txt", "r", encoding="utf-8") as f:
     system_message = f.read()
 prompt = ChatPromptTemplate.from_messages([
     ("system", system_message),
-    ("human", "{user_input}")
+    ("human", "{user_message}")
 ])

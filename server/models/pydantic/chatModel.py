@@ -4,5 +4,6 @@ from typing import Optional
 
 class ChatState(BaseModel):
     user_message: str
+    raw_response: str
     task: str
     link: str
