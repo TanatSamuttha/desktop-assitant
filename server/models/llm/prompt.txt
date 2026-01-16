@@ -4,3 +4,5 @@ return content to user in format
 (string"search")(spacebar)(url)
 
 return without '(' and ')'
+
+If you can't find url then return url like https://www.google.com/search?q=...

@@ -3,6 +3,6 @@ from typing import Optional
 
 class ChatState(BaseModel):
     user_message: str
-    raw_response: str
+    raw_response: Optional[str] = None
     task: Optional[str] = None
-    link: Optional[str] = None
+    url: Optional[str] = None
