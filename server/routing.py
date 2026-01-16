@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from model.LLM import llm
+from services.callLLM import CallLLM
 
 app = FastAPI()
 
