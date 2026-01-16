@@ -6,6 +6,7 @@ async def chat_node(state: ChatState) -> ChatState:
     messages = prompt.format_messages(
         chat_history = state.chat_history,
         user_input = state.user_input
+        
     )
 
     response = await llm.ainvoke(messages)
