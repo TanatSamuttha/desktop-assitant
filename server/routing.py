@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from model.LLM import llm
 
 app = FastAPI()
 
