@@ -1,7 +1,6 @@
 from langchain.schema import AIMessage, HumanMessage
-
-from models.pydantic_models import ChatState
-from models.llm_models import llm, prompt
+from models.pydantic.chatModel import ChatState
+from models.llm.llm import llm, prompt
 
 async def chat_node(state: ChatState) -> ChatState:
     messages = prompt.format_messages(
