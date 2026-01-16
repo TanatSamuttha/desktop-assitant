@@ -1,9 +1,8 @@
 from pydantic import BaseModel
-from langchain.schema import BaseMessage
 from typing import Optional
 
 class ChatState(BaseModel):
     user_message: str
     raw_response: str
-    task: str
-    link: str
+    task: Optional[str] = None
+    link: Optional[str] = None
