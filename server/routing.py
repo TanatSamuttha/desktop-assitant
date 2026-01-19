@@ -6,5 +6,5 @@ app = FastAPI()
 
 @app.post("/call-assistant")
 async def TestEndpoint(req: Request):
-    await callAssistant(req.user_message)
-    return {"result": "success"}
+    finalState = await callAssistant(req.user_message)
+    return finalState
